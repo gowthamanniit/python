@@ -1,0 +1,8 @@
+import tkinter
+win = tkinter.Tk()
+l = tkinter.Label(win,text = "Example for Label Box")
+l.pack()
+win.title("Application")
+win.geometry("300x300")
+win.wm_iconbitmap(r'C:\AppData\Local\Programs\Python\Python36\Python_Day1\Python_Day9\penguin.ico')
+win.mainloop()
