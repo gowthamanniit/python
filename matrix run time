@@ -1,0 +1,29 @@
+r=int(input("Enter no. of rows:"))
+c=int(input("Enter no. of cols:"))
+k=[]
+for i in range(0,r):
+    a=[]
+    for j in range(0,c):
+        v=int(input("enter value at position:"+str(i)+str(j)+"  "))
+        a.append(v)
+    k.append(a)
+
+print(" matrix format:")
+for i in range(0,r):
+    for j in range(0,c):
+        print(k[i][j], end ="   ")
+    print()
+    
+'''
+input and output:
+===========
+Enter no. of rows:2
+Enter no. of cols:2
+enter value at position:00  34
+enter value at position:01  45
+enter value at position:10  23
+enter value at position:11  12
+ matrix format:
+34   45   
+23   12   
+'''
