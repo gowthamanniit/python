@@ -1,0 +1,8 @@
+import tkinter
+from tkinter import messagebox
+t = tkinter.Tk()
+def show():
+    messagebox.showinfo("New Message","Thank you for choosing Python")
+b=tkinter.Button(t,text="Python",command=show)
+b.pack()
+t.mainloop()
