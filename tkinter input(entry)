@@ -1,0 +1,12 @@
+from tkinter import *
+m=Tk()
+l=Label(m,text="Username")
+l1=Label(m,text="Password")
+e1=Entry(m)
+e2=Entry(m)
+l.grid(row=0,column=0)
+l1.grid(row=1,column=0)
+e1.grid(row=0,column=1)
+e2.grid(row=1,column=1)
+mainloop()
+
