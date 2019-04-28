@@ -1,0 +1,10 @@
+import tkinter
+from tkinter import messagebox
+t=tkinter.Tk()
+def event():
+    messagebox.showinfo("Form","Submitted Form")
+b=tkinter.Button(t,text="Submit",command=event)
+b.pack()
+l=tkinter.Label(t,text="Example Program")
+l.pack()
+t.mainloop()
