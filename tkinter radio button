@@ -1,0 +1,8 @@
+from tkinter import *
+t=Tk()
+v=IntVar()
+r=Radiobutton(t,text="One",variable=v,value=1)
+r1=Radiobutton(t,text="Two",variable=v,value=2)
+r.pack()
+r1.pack()
+t.mainloop()
