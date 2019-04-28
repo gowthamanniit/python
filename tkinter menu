@@ -1,0 +1,23 @@
+from tkinter import *
+from tkinter import messagebox
+root = Tk()
+root.title("JAVA APPLICATION")
+def File():
+    messagebox.showinfo("File","File options are : \nNew File \n Open \n Save \n Save as\n")
+def Edit():
+    messagebox.showinfo("File","Edit options are : \nCopy \n Cut \n Paste \n Undo\n")
+# create a toplevel menu
+menubar = Menu(root)
+filemenu = Menu(menubar, tearoff=0)
+filemenu.add_command(label="New",command = File)
+filemenu.add_command(label="Save")
+filemenu.add_command(label="Save as")
+"""menubar.add_command(label="Run")
+menubar.add_command(label="Options")
+menubar.add_command(label="Window")
+menubar.add_command(label="Help")"""
+menubar.add_cascade(label="File", menu=filemenu)
+
+# display the menu
+root.config(menu=menubar)
+root.geometry('400x300')
