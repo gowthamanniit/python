@@ -1,0 +1,7 @@
+import tkinter
+from tkinter import messagebox
+root = tkinter.Tk()
+root.withdraw()
+messagebox.showerror("Error", "Invalid Credentials")
+messagebox.showwarning("Warning","There is no enough space in your drive")
+messagebox.showinfo("Information","Sucessfully installed Google Chrome")
