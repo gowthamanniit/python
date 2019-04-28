@@ -1,0 +1,11 @@
+import tkinter
+from tkinter import messagebox
+ 
+# hide main window
+root = tkinter.Tk()
+root.withdraw()
+ 
+# message box display
+messagebox.showerror("Error", "Error in your file")
+messagebox.showwarning("Warning","Restart the system immediately")
+messagebox.showinfo("Information","Successfully Installed")
