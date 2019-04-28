@@ -1,0 +1,5 @@
+import tkinter
+top=tkinter.Tk()
+B=tkinter.Button(top,text="Hello, this is python")
+B.pack()
+top.mainloop()
