@@ -1,0 +1,27 @@
+import tkinter
+from tkinter import messagebox
+def task():
+    if ((e.get() or e1.get()) == ""):
+        messagebox.showinfo("Invalid Input","Please enter username and Password")
+    else:
+        print("User Name: %s\nPassword: %s" % (e.get(), e1.get()))
+    if (e.get() =="Livewire" and  e1.get() =="Livewire"):
+        messagebox.showinfo("Login","Login sucessfully")
+    else:
+         messagebox.showinfo("Login","Unable to Login")
+win = tkinter.Tk()
+l = tkinter.Label(win,text = "Username",bg="#FF0000",fg="#66ff00")
+e=tkinter.Entry(win)
+l1 = tkinter.Label(win,text = "Password",bg="#FF0000",fg="#66ff00")
+e1=tkinter.Entry(win)
+b=tkinter.Button(win,text="Submit",command = task)
+l.pack()
+e.pack()
+l1.pack()
+e1.pack()
+b.pack()
+win.title("Application")
+win.geometry("300x300")
+win.configure(background="orange")
+#win.wm_iconbitmap(r'C:\Users\Sudha\AppData\Local\Programs\Python\Python36\Python_Day1\Python_Day9\penguin.ico')
+win.mainloop()
