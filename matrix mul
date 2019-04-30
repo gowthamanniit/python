@@ -1,0 +1,49 @@
+a=[]
+b=[]
+tot=[]
+
+m1r=int(input("enter matrix 1 rows:"))
+m1c=int(input("enter matrix 1 cols:"))
+
+m2r=int(input("enter matrix 2 rows:"))
+m2c=int(input("enter marrix 2 cols:"))
+
+if m1c!=m2r:
+    print("not perform mat multilication because not match row colum")
+else:
+    print("Enter First Matrix Values:")
+    for i in range(0,m1r):
+        temp=[]
+        for j in range(0,m1c):
+            print("Enter matrix at ",i,j,"-->",end="")
+            temp.append(int(input()))
+        a.insert(i,temp)
+
+    print("Enter second Matrix Values:")
+
+    for i in range(0,m2r):
+        temp=[]
+        for j in range(0,m2c):
+            print("Enter matrix at ",i,j,"-->",end="")
+            temp.append(int(input()))
+        b.insert(i,temp)
+
+
+    for i in range(0,m1r):
+        temp=[]
+        for j in range(0,m2c):
+            s=0
+            for k in range(0,m1c):
+                s=s+(a[i][k]*b[k][j])     
+            temp.append(s)
+        tot.insert(i,temp)
+    
+    
+
+    for i in range(0,m1r):
+        for j in range(0,m1c):
+            print(tot[i][j],end="  ")
+        print("\n") 
+
+
+                    
