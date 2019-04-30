@@ -1,0 +1,67 @@
+'''
+#arbitary arguments
+
+def ttt(*names):
+    for i in names:
+        print("hello ",i,"!")
+ttt('ram','raj','gopal','guru','gowthaman')
+'''
+
+'''
+#default arguments
+
+def funname(name,age=20):
+    print("hello ",name)
+    print("age ",age)
+
+funname("gowthaman")
+
+'''
+'''
+# keyword argument
+
+def funname(name,age):
+    print(name,age)
+funname(name="raja",age=30)
+'''
+
+'''
+#lambda function or ananymous function
+
+gowthaman=lambda a: a*20
+
+print(gowthaman(3))
+'''
+
+'''
+# lambda or ananymous with filter function
+
+li=[12,3,4,5,9,8,10]
+
+sriram=list(filter(lambda x: x%2==0,li))
+
+print(sriram)
+
+'''
+'''
+#lambda with map
+
+items=[2,3,4,5,6]
+for i in map(lambda x: x+1,items):
+    print(i)
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
