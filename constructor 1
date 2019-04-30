@@ -1,0 +1,49 @@
+#constructor:basic level
+'''
+
+def:
+    it is used to initialize value to variable when user create instance.
+    use double underscore__init__(self)
+
+rules:
+    1)Constructor automatically invoke at the time of instance creation.
+
+syntax:
+        class classname:
+             def__init__(self):
+                 **************variable declare(self.newvar=var)
+             def__init__(self,var1)
+                 self.var1=var1
+        class name()
+        obj=classname("data")
+'''
+'''
+class cons:
+    def __init__(self):
+        print("default or null constructor is created")
+cons()
+'''
+'''
+class kk:
+    def __init__(self):
+        self.a=100
+        self.b=200
+ob1=kk()
+print(ob1.a)
+print(ob1.b)
+
+kk()
+'''
+#===============parametarized constructor===================#
+
+class cons:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+
+ob1=cons(55,67)
+print(ob1.a)
+print(ob1.b)
+ob2=cons(99,90)
+print(ob2.a)
+print(ob2.b)
