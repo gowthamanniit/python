@@ -1,0 +1,27 @@
+p=0
+m=[]
+z=0
+class new3:
+    rno=0
+    name=''
+    mark=''
+    def display3(self,rno,name,mark):
+        self.rno=rno
+        self.name=name
+        self.mark=mark
+x=int(input("enter limit:"))
+for i in range(0,x):
+    m.append(i)
+    m[i]=new3()
+    a=int(input("rollno:"))
+    b=input("enter name:")
+    c=int(input("enter mark:"))
+    m[i].display3(a,b,c)
+small=m[0].mark
+for j in range(0,x):
+    if small<m[j].mark:
+        small=m[j].mark
+        p=j
+for j in range(0,x):
+    if m[p].mark==m[j].mark:
+        print("highest mark details:",m[j].name,'\nmark:',m[j].mark,'\nrollno:',m[j].rno)
