@@ -1,0 +1,109 @@
+  #to find cut off mark limited (3) studtents
+'''
+class student:
+    def dis(self,name,mat,phy,che):
+        self.phy=phy/2
+        self.mat=mat
+        self.che=che/2
+        self.name=name
+        self.cutoff=self.mat+self.phy+self.che
+        return self
+s1=student()
+s1=s1.dis("robo sankar",78,89,89)
+
+s2=student()
+s2=s2.dis("psycho sriram",98,90,89)
+
+s3=student()
+s3=s3.dis("roahit sharma",98,97,89)
+
+print(s1.name,"cutoff marks ",s1.cutoff)
+print(s2.name,"cutoff marks ",s2.cutoff)
+print(s3.name,"cutoff marks ",s3.cutoff)
+'''
+'''
+#to find cut off mark unlimited (n) studtents
+#way 1
+class student:
+    def dis(self,name,mat,phy,che):
+        self.phy=m2/2
+        self.mat=m1
+        self.che=m3/2
+        self.name=n1
+        self.cutoff=self.mat+self.phy+self.che
+        return self
+        
+n=int(input("enter number of students:" ))
+alldata=[]
+for i in range(0,n):
+    cut=student()
+    print("Enter student details for ",i+1)
+    n1=input("enter your name:")
+    m1=int(input("enter your maths mark:"))
+    m2=int(input("enter your physics mark:"))
+    m3=int(input("enter your chemistry mark:"))
+    cut=cut.dis(n1,m1,m2,m3)
+    alldata.append(cut)
+
+max=alldata[0].cutoff       
+for i in range(0,n):
+    if max<alldata[i].cutoff:
+        max=alldata[i].cutoff
+        hname=alldata[i].name
+
+print("higherst person Name:",hname," highest person cutoff mark:   ",max)
+'''
+    
+#way 2 
+
+class student:
+    def dis(self,name,mat,phy,che):
+        self.phy=phy/2
+        self.mat=mat
+        self.che=che/2
+        self.name=name
+        self.cutoff=self.mat+self.phy+self.che
+        return self
+        
+n=int(input("enter number of students:" ))
+cut=[]
+for i in range(0,n):
+    cut.append(i)
+    cut[i]=student()   # note cut[i]
+    print("Enter student details for ",i+1)
+    cut[i].n1=input("enter your name:")
+    cut[i].m1=int(input("enter your maths mark:"))
+    cut[i].m2=int(input("enter your physics mark:"))
+    cut[i].m3=int(input("enter your chemistry mark:"))
+    cut[i]=cut[i].dis(cut[i].n1,cut[i].m1,cut[i].m2,cut[i].m3)
+    
+
+max=cut[0].cutoff       
+for i in range(0,n):
+    if max<cut[i].cutoff:
+        max=cut[i].cutoff
+
+print("highest person cutoff mark:   ",max)
+
+print("higherst person Names:")
+for i in range(0,n):  # use n or len(cut)
+    if max==cut[i].cutoff:
+        print(cut[i].n1)
+
+
+
+'''
+   way 1     alldata=[cut,cut,cut,cut]
+
+   note: here cut is object
+
+        or
+
+   way2
+   cut=[]
+   cut.append(0)
+        cut[0].
+        cut[1]
+        cut[2]
+'''
+
