@@ -1,0 +1,41 @@
+a=[]
+b=[]
+tot=[]
+
+r=int(input("enter rows:"))
+c=int(input("enter cols:"))
+
+print("Enter First Matrix Values:")
+
+for i in range(0,r):
+    temp=[]
+    for j in range(0,c):
+        print("Enter matrix at ",i,j,"-->",end="")
+        temp.append(int(input()))
+    a.insert(i,temp)
+
+print("Enter second Matrix Values:")
+
+for i in range(0,r):
+    temp=[]
+    for j in range(0,c):
+        print("Enter matrix at ",i,j,"-->",end="")
+        temp.append(int(input()))
+    b.insert(i,temp)
+
+
+for i in range(0,r):
+    temp=[]
+    for j in range(0,c):
+        temp.append(a[i][j]+b[i][j])
+    tot.insert(i,temp)
+    
+    
+
+for i in range(0,r):
+    for j in range(0,c):
+        print(tot[i][j],end="  ")
+    print("\n") 
+
+
+                    
