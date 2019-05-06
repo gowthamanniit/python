@@ -1,0 +1,15 @@
+#1. simple lambda
+raja=lambda var: var*var
+print(raja(100))
+
+#2. lambda with filter
+lv=[44,555,33,22,11,8]
+#raja=list(filter(lambda var: var%2==0,lv))
+raja=tuple(filter(lambda var: var%2==0,lv))
+print(raja)
+
+#3. lambda with map
+
+lv=[4,5,6,7,8]
+for v in map(lambda x: x*2,lv):
+    print(v)
