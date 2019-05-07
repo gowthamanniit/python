@@ -1,0 +1,28 @@
+import tkinter
+from tkinter import messagebox
+from tkinter import *
+def task():
+
+    e2.delete(0,'end')
+    e.focus()
+    e2.insert(0,int(e.get())+int(e1.get()))
+    
+win = Tk()
+l = Label(win,text = "Enter No.1",bg="#FF0000",fg="#66ff00")
+e=Entry(win)
+l1 = Label(win,text = "Enter No. 2",bg="#FF0000",fg="#66ff00")
+e1=Entry(win)
+l2 = Label(win,text = "total",bg="#FF0000",fg="#66ff00")
+e2=Entry(win)
+b=Button(win,text="Total",command = task)
+l.place(x=100,y=100)
+e.place(x=170,y=100)
+l1.place(x=100,y=150)
+e1.place(x=170,y=150)
+l2.place(x=100,y=350)
+e2.place(x=170,y=350)
+b.place(x=170,y=250)
+win.title("Application")
+win.geometry("300x300")
+win.configure(background="orange")
+win.mainloop()
