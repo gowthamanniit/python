@@ -1,0 +1,8 @@
+from tkinter import *
+
+root = Tk()
+root.geometry("500x600")
+T = Text(root, height=5, width=30)
+T.pack()
+T.insert(END, "Just a text Widget\nin two lines\n")
+mainloop()
