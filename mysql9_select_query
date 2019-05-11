@@ -1,0 +1,24 @@
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="sriram"
+)
+
+mycursor = mydb.cursor()
+
+sql="select * from student"
+
+
+mycursor.execute(sql)
+
+alldata=mycursor.fetchall()
+
+for i in alldata:
+    print(i)
+
+mycursor.close()
+mydb.close()
+
