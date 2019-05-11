@@ -5,3 +5,5 @@ ALTER TABLE customers ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY
 mycursor.execute("insert student values('ruba4'),('sriram'),('gowthaman')")
 print(mycursor.rowcount," rows successfully inserted")
 
+"select * from student limit 5" // top 5 rows
+
