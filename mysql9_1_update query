@@ -1,0 +1,19 @@
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="sriram"
+)
+
+mycursor = mydb.cursor()
+
+sql="update student set name='GOWTHAMAN' where name='gowthman.k niit'"
+
+
+mycursor.execute(sql)
+print(mycursor.rowcount," rows updated")
+mydb.commit()
+mycursor.close()
+mydb.close()
