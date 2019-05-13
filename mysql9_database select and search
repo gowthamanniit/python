@@ -1,0 +1,32 @@
+#----------fetchdata----------------------#
+import mysql.connector
+
+mydb=mysql.connector.connect(host="localhost",user="root",password="1234",database="karthick")
+
+mycursor=mydb.cursor()
+
+print("Enter register number to check found or not:")
+rno=int(input("Enter register Number:"))
+check=False
+sql="select * from student"
+
+mycursor.execute(sql)
+
+fetchdata=mycursor.fetchall()
+
+for i in fetchdata:
+    if i[0]==rno:
+        check=True
+        name=i[1]
+        mark=i[2]
+        break
+
+if check==False:
+    print("not found in database:")
+else:
+    print("Candidate Name:",name)
+    print("Candidate mark:",mark)
+
+mycursor.close()
+mydb.close()
+
