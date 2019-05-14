@@ -1,0 +1,70 @@
+"""
+Thread :
+Thread is a task.
+it can run background.
+muliple threads share same memory
+thread is a light weight process
+
+Thread module:
+
+1) threading.activeCount(): returns the number of therad objects.
+2) threading.currentThread(): ,,          in the caller thread.
+3) threading.enumerate(): returns a list of all thread objects of a currently
+                          active thread.
+
+thread methods:
+
+1) run() : entry point of a thread. (called function)
+2) start(): calling thread. 
+3) join([time]): the join() waits for threads to terminate
+4) isAlive(): the isAlive() method checks whether a thread is still executing.
+5) getName(): returns the name of the thread.
+6) setName(): sets the name of a thread.
+
+creating thread:
+
+    header file:
+    import threading
+    import time
+
+    1) Thread is a built-in class
+    2) Thread constructor:  __init__(self[,arglist,..])
+    3) run(self[,arglist,..])
+    
+"""
+'''
+import time
+for i in range(10):
+    print(i)
+    time.sleep(1)
+'''
+'''
+import threading
+class myclass(threading.Thread):
+    def run(self):
+        print("thread called")
+s1=myclass()
+s1.start()
+'''
+
+import threading
+import time
+class myclass(threading.Thread):
+    def __init__(self,name):
+        threading.Thread.__init__(self)
+        self.name=name        
+    def run(self):
+        for i in range(5):
+            print("thread called ",self.name,time.ctime(time.time()))
+            time.sleep(.4)
+s1=myclass("sri")
+s2=myclass("ram")
+s1.start()
+print("Running :",s1.isAlive())
+print("thread name :",s1.getName())
+s1.setName("rohit")
+print("thread name :",s1.getName())
+s1.join()
+print("Running :",s1.isAlive())
+
+s2.start()
