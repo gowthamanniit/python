@@ -1,0 +1,65 @@
+
+'''
+import time
+for i in range(10,25,2):
+    print(i)
+    time.sleep(1)
+'''
+
+'''
+import threading
+
+class sriram(threading.Thread):
+    def run(self):
+        print("run method called")
+
+s1=sriram()
+s1.start()
+'''
+
+'''
+import threading
+class gokul(threading.Thread):
+    def __init__(self,name):
+        threading.Thread.__init__(self)
+        self.name=name
+        print(" constructor called ")
+    def run(self):
+        print(" name = ",self.name)
+s1=gokul("installed mysql")
+s1.start()
+'''
+
+# multithreading
+
+import threading
+import time
+class myclass(threading.Thread):
+    def __init__(self,id1,name):
+        threading.Thread.__init__(self)
+        self.id=id1
+        self.name=name
+    def run(self):
+        print("thread starting id: ",self.id,"  name = ",self.name)
+        time.sleep(.5)
+        print("\nthread starting : ",self.id,"   ",self.name,time.ctime(time.time()))
+s1=myclass(101,'ruba')
+s2=myclass(102,'karhti')
+s3=myclass(103,'sriram')
+s1.start()  # go to run method
+s1.setName("rohit")
+print("name = ",s1.getName())
+s2.setName("gokul")
+print("name = ",s2.getName())
+print("name = ",s3.getName())
+print("s1 live thread : ",s1.isAlive())
+s1.join()
+
+print("s1 live thread : ",s1.isAlive())
+s2.start()  # go to run method
+s3.start()
+
+            
+
+
+
