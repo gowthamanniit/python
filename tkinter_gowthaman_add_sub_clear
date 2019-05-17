@@ -1,0 +1,48 @@
+from tkinter import *
+win=Tk()
+
+win.geometry("600x500")
+
+
+
+def findtotal():
+    n1=int(e1.get())
+    n2=int(e2.get())
+    clearbox()
+    e3.insert(0,(n1+n2))
+def findsubtraction():
+    n1=int(e1.get())
+    n2=int(e2.get())
+    clearbox()
+    e3.insert(0,(n1-n2))
+def clearbox():
+    e3.delete(0,"end")
+    
+    
+
+l1=Label(win,text="Enter number 1")
+l1.place(x=200,y=100)
+
+l2=Label(win,text="Enter number 2")
+l2.place(x=200,y=150)
+
+b1=Button(win,text="addition",command=findtotal)
+b1.place(x=250,y=200)
+
+b2=Button(win,text="subtraction",command=findsubtraction)
+b2.place(x=350,y=200)
+
+b3=Button(win,text="clear",command=clearbox)
+b3.place(x=450,y=200)
+
+l3=Label(win,text="Result :")
+l3.place(x=200,y=250)
+
+e1=Entry(win,width=15)
+e1.place(x=300,y=100)
+e2=Entry(win,width=15)
+e2.place(x=300,y=150)
+e3=Entry(win,width=15)
+e3.place(x=300,y=250)
+
+win.mainloop()
