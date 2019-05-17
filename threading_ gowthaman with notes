@@ -68,3 +68,26 @@ s1.join()
 print("Running :",s1.isAlive())
 
 s2.start()
+
+//=======================================================find thread name self.name ------without using constructor-------------------
+import threading
+import time
+
+class myclass(threading.Thread):
+    def run(self):
+        for i in range(1,11):
+            print(self.getName(),i," Time = ",time.ctime(time.time()))            
+            #time.sleep(.2)
+obj1=myclass()
+obj2=myclass()
+
+obj1.setName("A thread")
+obj2.setName("B thread")
+print("Thread -->",obj1.getName())
+print("Thread -->",obj2.getName())
+print("Thread Running status: ",obj1.isAlive())
+obj1.start()
+time.sleep(.1)
+#obj1.join()
+print("Thread Running status: ",obj1.isAlive())
+obj2.start()
