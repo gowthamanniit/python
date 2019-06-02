@@ -1,0 +1,20 @@
+    eadd=eadd.get(1.0,'end')  // important line to get textarea(Text) value in python
+    
+    
+    a=t1.get()
+    t2.delete(0,"end")    
+    t2.insert(0,a)
+    t2.focus()
+    
+t1=Entry(window,width="100")
+t1.place(x="100",y="500")
+
+b1=Button(window,text="clickme",command=fun)
+b1.place(x=100,y=40)
+
+
+t2=Entry(window,width="100")
+t2.place(x="100",y="300")
+
+eadd=Text(window,width="30",height="5")
+eadd.place(x="100",y="150")
