@@ -1,6 +1,15 @@
-    eadd=eadd.get(1.0,'end')  // important line to get textarea(Text) value in python
-    
-    
+import mysql.connector
+from tkinter import *
+from tkinter import messagebox
+window=Tk()
+window.title("this is title")
+window.configure(bg="green",width="555",height="666")
+wi=window.winfo_screenwidth()
+hi=window.winfo_screenheight()
+window.geometry("%dx%d+0+0"%(wi,hi))
+
+def fun():
+    textarea=eadd.get(1.0,'end')
     a=t1.get()
     t2.delete(0,"end")    
     t2.insert(0,a)
@@ -18,3 +27,5 @@ t2.place(x="100",y="300")
 
 eadd=Text(window,width="30",height="5")
 eadd.place(x="100",y="150")
+
+window.mainloop()
