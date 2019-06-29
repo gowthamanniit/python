@@ -1,0 +1,43 @@
+import mysql.connector
+from tkinter import *
+from tkinter import messagebox
+
+
+win=Tk()
+win.configure(bg="green")
+win.geometry("700x600")
+win.title("insert")
+
+mydb=mysql.connector.connect(host="localhost",user="root",password="1234",database="emp")
+mycursor=mydb.cursor()
+
+    
+def goinsert():
+    a=int(e1.get())
+    b=e2.get()
+    c=int(e3.get())
+    mycursor.execute("insert into student values (%d,'%s',%d)"%(a,b,c))
+    mydb.commit()
+    messagebox.showinfo("Inserted", "Successfully inserted")
+
+l1=Label(text="Enter employee number:")
+l1.place(x=100,y=150)
+
+e1=Entry(width="20")
+e1.place(x=300,y=150)
+l2=Label(text="Enter employee name:")
+l2.place(x=100,y=250)
+
+e2=Entry(width="20")
+e2.place(x=300,y=250)
+
+l3=Label(text="Enter employee salary:")
+l3.place(x=100,y=350)
+
+e3=Entry(width="20")
+e3.place(x=300,y=350)
+
+
+b1=Button(text="insert/save",command=goinsert)
+b1.place(x=300,y=400)
+win.mainloop()
