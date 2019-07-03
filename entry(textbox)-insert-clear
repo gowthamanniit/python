@@ -1,0 +1,42 @@
+import tkinter
+from tkinter import messagebox
+w=tkinter.Tk()
+sw=w.winfo_screenwidth()
+sh=w.winfo_screenheight()
+w.configure(bg="red")
+w.geometry("%dx%d+0+0"%(sw,sh))
+w.title("addition of two numbers")
+
+def addition():
+    no1=int(e1.get())
+    no2=int(e2.get())
+    e3.delete(0,"end")
+    e3.insert(0,(no1+no2))
+    if no1>34 and no2>34:
+        messagebox.showinfo("Result","congradulations pass")
+    else:
+        messagebox.showwarning("Result","better luck next time!!!")
+
+def close():
+    w.destroy()
+    
+l1=tkinter.Label(w,text="enter no.1")
+e1=tkinter.Entry(w)
+l2=tkinter.Label(w,text="enter no.2")
+e2=tkinter.Entry(w)
+b1=tkinter.Button(w,text="Total",command=addition)
+b2=tkinter.Button(w,text="close",command=close)
+l3=tkinter.Label(w,text="Result:")
+e3=tkinter.Entry(w)
+
+l1.place(x="100",y="100")
+e1.place(x="250",y="100")
+l2.place(x="100",y="150")
+e2.place(x="250",y="150")
+
+b1.place(x="250",y="200")
+b2.place(x="350",y="200")
+l3.place(x="100",y="250")
+e3.place(x="250",y="250")
+
+w.mainloop()
