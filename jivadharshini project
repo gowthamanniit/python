@@ -1,0 +1,66 @@
+
+import mysql.connector
+from tkinter import *
+from tkinter import messagebox
+window=Tk()
+wi=window.winfo_screenwidth()
+hi=window.winfo_screenheight()
+window.configure(bg="blue",width=wi,height=hi)
+window.title("EMPLOYEE DETAILS")
+l=Label(window,text="EMPLOYEE DETAILS",width=20,font=("bold",20))
+mydb=mysql.connector.connect(host="localhost",user="root",password="12345",database="jiva")
+mycursor=mydb.cursor()
+def goinsert():
+    a=int(e1.get())
+    b=e2.get()
+    c=e3.get()
+    d=int(e4.get())
+    e=int(e5.get())
+    mycursor.execute("insert into empdetails values(%d,'%s','%s',%d,%d)"%(a,b,c,d,e))
+    mydb.commit()
+    messagebox.showinfo("Inserted","INSERTED SUCCESSFULLY")
+l1=Label(text="ENTER THE EMPLOYEE NUMBER:")
+a=IntVar()
+l1.place(x=100,y=150)
+e1=Entry(window,width="20")
+e1.place(x=300,y=150)
+
+l2=Label(text="ENTER THE EMPLOYEE NAME:")
+b=StringVar()
+l2.place(x=100,y=250)
+e2=Entry(window,width="20")
+e2.place(x=300,y=250)
+
+l3=Label(text="ENTER THE EMPLOYEE ADREESS:")
+c=StringVar()
+l3.place(x=100,y=350)
+e3=Entry(window,width="20")
+e3.place(x=300,y=350)
+
+l4=Label(text="ENTER SALARY:")
+d=IntVar()
+l4.place(x=100,y=400)
+e4=Entry(window,width="20")
+e4.place(x=300,y=400)
+
+l5=Label(text="ENTER THE PHONE NUMBER:")
+e=IntVar()
+l5.place(x=100,y=450)
+e5=Entry(window,width="20")
+e5.place(x=300,y=450)
+
+
+r=IntVar()
+r.set(1)
+l6=Label(text="SELECT GENDER")
+l6.place(x=100,y=500)
+m=Radiobutton(window,text="MALE",value=1,variable=r)
+m.place(x=300,y=500)
+f=Radiobutton(window,text="FEMALE",value=2,variable=r)
+f.place(x=400,y=500)
+o=Radiobutton(window,text="OTHERS",value=3,variable=r)
+o.place(x=500,y=500)
+
+b1=Button(window,text="SAVE",command=goinsert)
+b1.place(x=600,y=700)
+window.mainloop()
