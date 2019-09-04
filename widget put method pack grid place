@@ -1,0 +1,41 @@
+import tkinter
+win=tkinter.Tk()
+win.title("this is simple GUI window ")
+win.configure(bg="yellow")
+w=win.winfo_screenwidth()
+h=win.winfo_screenheight()
+
+l1=tkinter.Label(win,text="Enter Your Name:")
+#l1.pack()
+
+e1=tkinter.Entry(win)
+#e1.pack()
+
+l2=tkinter.Label(win,text="Enter City:")
+#l2.pack()
+
+e2=tkinter.Entry(win)
+#e2.pack()
+
+b1=tkinter.Button(win,text="ClickMe")
+#b1.pack()
+
+'''
+l1.grid(row=0,column=0)
+e1.grid(row=0,column=1)
+l2.grid(row=1,column=0)
+e2.grid(row=1,column=1)
+b1.grid(row=3,column=1)
+'''
+
+l1.place(x="500",y="150")
+e1.place(x="700",y="150")
+
+l2.place(x="500",y="250")
+e2.place(x="700",y="250")
+
+b1.place(x="700",y="350")
+
+
+win.geometry("%dx%d+0+0"%(w,h))
+win.mainloop()
