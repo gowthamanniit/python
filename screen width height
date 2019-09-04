@@ -1,0 +1,16 @@
+import tkinter
+
+win=tkinter.Tk()
+
+win.title("this is simple GUI window ")
+win.configure(bg="yellow")
+
+w=win.winfo_screenwidth()
+h=win.winfo_screenheight()
+
+print("width =",w)
+print("height =",h)
+
+win.geometry("%dx%d+0+0"%(w,h))
+
+win.mainloop()
