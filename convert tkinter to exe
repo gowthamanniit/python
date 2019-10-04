@@ -1,0 +1,15 @@
+======================================1=====================
+Install PyInstaller from PyPI:
+
+pip install pyinstaller
+Go to your program’s directory and run:
+
+pyinstaller yourprogram.py
+======================================2=====================
+pyinstaller.exe --onefile --icon=myicon.ico main.py
+--onefile option produces, well, one output file instead of many.
+
+--icon will connect an icon of your choice.
+
+main.py is your main file with the main function.
+==============================================================
