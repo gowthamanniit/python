@@ -1,0 +1,11 @@
+step 1:
+C:\Users\Livewire\AppData\Local\Programs\Python\Python310\Scripts>pip install pyinstaller
+step 2:
+C:\Users\Livewire\AppData\Local\Programs\Python\Python310\Scripts>pyinstaller --onefile -w gui_05.py
+
+(python file shold be scripts folder) ex:gui_05.py
+
+step 3:
+open dist folder in scripts folder.
+we can see exe file (standalone application)
+copy this file and paste anywhere.
