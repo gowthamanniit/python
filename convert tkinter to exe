@@ -13,3 +13,33 @@ pyinstaller.exe --onefile --icon=myicon.ico main.py
 
 main.py is your main file with the main function.
 ==============================================================
+
+
+======================================================in detail====================================================
+upgrade pip:
+---------------
+python.exe -m pip install --upgrade pip
+
+
+convert .py file into .exe
+-------------------------------
+step 1:
+C:\Users\Livewire\AppData\Local\Programs\Python\Python310\Scripts> pip install pyinstaller
+
+step 2:
+paste your .py & .ico file in scripts folder
+
+step 3:
+C:\Users\Livewire\AppData\Local\Programs\Python\Python310\Scripts> pyinstaller.exe --onefile --icon=filename.ico yourpyfile.py
+
+ex:
+C:\Users\Livewire\AppData\Local\Programs\Python\Python310\Scripts>pyinstaller.exe --onefile --icon=test.ico manojdatabase2.py
+
+step 4:
+check dist folder :
+ you can see your .exe file
+copy .exe file and paste any where in your system.
+------------------------------------------------------------------------------
+
+
+
